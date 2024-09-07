@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 // CSV 导出链接
-const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTy97piP_HYJB3SgNSMaDUjZO3zrAESTHhaDzDBVS0nweAYEq_rtIgKl7k93BQFHKLJSGARLhTQMlh7/pub?gid=0&single=true&output=csv';
+const url = 'https://github.com/Oaciqihz/anything/raw/main/test.csv';
 
 // 目标文件夹路径
 const outputDir = path.join(__dirname, '/src/locales');
