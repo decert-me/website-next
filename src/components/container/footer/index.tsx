@@ -1,7 +1,6 @@
-import { Divider } from "antd";
 import Image from "next/image";
 
-export default function AppFooter() {
+const AppFooter = () => {
     const urls = [
         { label: "Dune", value: "https://dune.com/upchaindao/decert" },
         { label: "Twitter", value: "https://twitter.com/decertme" },
@@ -10,12 +9,12 @@ export default function AppFooter() {
     ];
 
     return (
-        <div className="text-white">
+        <div className="text-black ">
             <div className="flex justify-between content-center px-[240px] pt-[44px] pb-[54px]">
                 {/* logo info */}
                 <div className="text-left">
                     <div className="w-[130px] h-[30px] relative">
-                        <Image src={""} fill objectFit="contain" alt="logo" />
+                        <Image src="/img/logo_white.png" alt="logo" />
                     </div>
                     <p className="mt-[12px] text-[14px] font-[600] leading-[16px]">You are what you build.</p>
                 </div>
@@ -28,7 +27,7 @@ export default function AppFooter() {
                     ))}
                 </div>
             </div>
-            <Divider className="m-0 border border-[#1D1D1D]" />
+            {/* <Divider className="m-0 border border-[#1D1D1D]" /> */}
             <div className="mt-[41px] mb-[53px] mx-auto text-[16px] font-[600] leading-[22px]">
                 <span>© 2024 DeCert.me | </span>
                 <a href="https://beian.miit.gov.cn/" target="_blank">
@@ -40,3 +39,5 @@ export default function AppFooter() {
         </div>
     );
 }
+
+export default AppFooter;
