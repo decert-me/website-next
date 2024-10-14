@@ -35,6 +35,8 @@ const config: Config = {
     			sm: 'calc(var(--radius) - 4px)'
     		},
     		colors: {
+				gold: "#8F5A35",
+				bg_dark: '#3B3C44',
     			background: 'hsl(var(--background))',
     			foreground: 'hsl(var(--foreground))',
     			card: {

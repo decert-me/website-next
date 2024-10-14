@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import { AppFooter, AppHeader } from "@/components/container";
+import Provider from "@/components/provider";
+import { cookies } from "next/headers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,12 +17,19 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+
+    const theme = cookies().get("theme")?.value as "light"|"dark" || "system";
+
     return (
         <html lang="en">
             <body className={inter.className}>
-                <AppHeader />
-                {children}
-                <AppFooter />
+                <Provider
+                    theme={theme}
+                >                    
+                    <AppHeader />
+                    {children}
+                    <AppFooter />
+                </Provider>
             </body>
         </html>
     );
